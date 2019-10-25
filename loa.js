@@ -1,5 +1,5 @@
-var NUMBER_OF_COLS = 4,
-	NUMBER_OF_ROWS = 4,
+var NUMBER_OF_COLS = 8,
+	NUMBER_OF_ROWS = 8,
 	BLOCK_SIZE = 100;
 
 //TODO enable a n by n board n >= 3
