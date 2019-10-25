@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML5 Canvas - raps</title>
+        <link rel="stylesheet" href="loa.css" type="text/css" media="screen">
+<!--        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>-->
+		<script src='loa.js'></script>
+	</head>
+	<body onload="draw();">
+
+        <div class="left">
+            <canvas id="board" width="400" height="400"></canvas>
+        </div>
+        
+        <div class="right" id="scoreCard">
+            <h1>Move List</h1>
+            <ol type="1" id="moveList">
+                <li>Test</li>
+            </ol>
+        </div>
+        
+        <div style="clear: both;"></div>
+        
+        <div>
+            <button id="resetCanvas" class="button" onclick='draw();'>Reset</button>
+        </div>
+        
+	</body>
+</html>
