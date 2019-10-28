@@ -39,7 +39,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://jamesheppell.github.io/raps/rules">Rules<span class="sr-only"></span></a>
+                <a class="nav-link" href="#" onclick="showRules();">Rules<span class="sr-only"></span></a>
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -57,10 +57,13 @@
         </div>
         
         
-        <div class="container">
+        <div class="container" id="mainSection">
         
             <div class="row">
                 <div class="column left">
+                    <div>
+                        <button id="rulesButton" class="button" onclick="showRules();">Rules</button>
+                    </div>
                     <div>
                         <button id="resetCanvas" class="button" onclick='draw();'>Reset</button>
                     </div>
@@ -77,6 +80,22 @@
                 </div>
        
             </div>
+        
+        </div>
+        
+        <div class="container hideSection" id="rulesSection">
+        
+            <div>
+                <h2>Aim</h2>
+                <p>To connect all of your pieces, horizontally, vertically or diagonally before your opponent. If both teams connect all of their pieces at the same time its a draw.</p>
+                <h2>Movement</h2>
+                <p>Every peice is treated the same. Each piece can move in any direction, the exact number of squares it moves is equal to the number of pieces in that particular direction. A piece may hop over its own pieces but not the opponents. To capture an opponents peice you must land on it directely.</p>
+                <p><b>That's it! Enjoy...</b></p>
+                <button class="button"
+                        onclick="unshowRules();">Back</button>
+            </div>
+            
+            
         
         </div>
  
@@ -103,7 +122,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       
     <script type="text/javascript">
+         function showRules(){
+            $("#mainSection").addClass("hideSection");
+            $("#rulesSection").removeClass("hideSection");
+        }
         
+        function unshowRules(){
+            $("#mainSection").removeClass("hideSection");
+            $("#rulesSection").addClass("hideSection");
+        }
         
     </script>
         

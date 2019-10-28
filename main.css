@@ -25,6 +25,11 @@ body{
     z-index:-1;
 }
 
+/* To add rules in */
+.hideSection{
+    display: none;
+}
+
 .centered{
     text-align: center;
 }
