@@ -752,8 +752,10 @@ function writeToScoreCard(moveText){
 
 
 function board_click(ev) {
-	var x = ev.clientX - canvas.offsetLeft,
-		y = ev.clientY - canvas.offsetTop,
+    var canvasClientRect = canvas.getBoundingClientRect();
+	
+    var x = ev.clientX - canvasClientRect.left,
+		y = ev.clientY - canvasClientRect.top,
 		clickedBlock = screenToBlock(x, y);
     
     if (GAME_FINISHED){
